@@ -1,0 +1,30 @@
+:root {
+    --maroon: #8b0b0b;
+}
+
+.card-container {
+    padding: 0;
+    border-radius: 10px;
+    background: #FFFFFF;
+    overflow: hidden;
+    
+}
+.card-img-container {
+    overflow: hidden;
+}
+h3.title {
+    font-size: 30px;
+}
+.extrapadding {
+    padding: 100px 0;
+}
+.card-body {
+    padding: 30px;
+}
+.showToggle {
+    cursor: pointer;
+    color: var(--maroon);
+}
+.box-shadow {
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,.09); 
+}

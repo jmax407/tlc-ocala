@@ -1,0 +1,360 @@
+
+$maroon: #8b0b0b;
+$white: #FFFFFF;
+$darkgray: #282F3B;
+$lightgray: #a6a6a6;
+$yellow: #e0bc3f;
+$darkyellow: #987600;
+$tan: #f7f3e7;
+$tandark: #eedfc9;
+
+.bg-yellow {
+    background-color: $yellow !important;
+    color: $darkgray;
+}
+.bg-yellow a {
+    color: $maroon !important;
+    font-weight: 800;
+}
+.bg-yellow a:hover {
+    color: $white !important;
+}
+.bg-white {
+    background-color: $white;
+    color: $darkgray;
+}
+.bg-tan {
+    background-color: $tan;
+    color: $darkgray;
+}
+
+html, body, #root {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  font-size: 16px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 500;
+  background: #f7f3e7;
+  padding-top:90px;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: $white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar .nav-item .dropdown-menu{ transition: all ease .3s; }
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
+
+
+
+.btn-primary {
+    background: $maroon;
+    border: $maroon;
+    font-size: 1.25rem;
+}
+.btn-outline-primary {
+    border-color: $maroon;
+}
+.btn-outline-secondary {
+    border-color: $yellow;
+}
+.btn-primary:hover {
+    background-color: $maroon !important;
+}
+.btn-secondary {
+    background: $yellow;
+    border: $darkyellow;
+    color: $darkgray;
+}
+.btn-secondary:hover {
+    background-color: #ae8a0c !important;
+}
+.btn-rounded {
+    border-radius: 40px;
+}
+.btn-main {
+    background: $white;
+    border-radius: 50px;
+    color: $maroon;
+    padding: 10px 25px;
+    border: 1px solid $tandark;
+}
+.btn-main:hover {
+    border-color: $maroon !important;
+    background: $white !important;
+}
+.btn-paypal {
+    display: block;
+    position: relative;
+    min-width: 150px;
+    min-height: 47px;
+}
+.btn-paypal img { opacity: 0; position: absolute; top: 0; left: 0;}
+.btn-link {
+    color: $yellow;
+}
+.nav-link {
+    border-bottom: 2px solid transparent;
+    font-size: 1.25rem;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.nav-link:hover {
+    cursor: pointer;
+    border-bottom: 2px solid $yellow;
+}
+section.vh100 {
+    min-height: 700px;
+
+}
+
+.vh50 {
+    min-height: 50vh;
+}
+.intro {
+    // background-image: url('./assets/images/intro-bg.jpg');
+    // background-size: cover;
+    font-size: 1.5rem;
+}
+
+#give {
+    padding-top: 100px;
+    background-image: url('./assets/images/handout.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    font-size: 1.5rem;
+    color: $white;
+}
+h1,h2,h3,h4 {
+    font-weight: 800;
+}
+h1 {font-size: 5rem;}
+h2 {font-size: 3rem;}
+h3 {font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.accent {
+    display: block;
+    margin-bottom: 10px;
+}
+.give-amount {
+    font-size: 4rem;
+}
+.give-amount input {
+    background: none;
+    border: none;
+}
+.give-amount .form-control {
+    font-size: 4rem;
+}
+.give-amount .form-control:focus {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.section-title {
+    font-size: 4rem;
+}
+.section-title:after {
+    display: block;
+    content: ' ';
+    background: $maroon;
+    height: 4px;
+    width: 100px;
+    margin: 20px 0;
+}
+
+.nobreak {
+    white-space:nowrap;
+}
+.btn-tlc {
+    padding: 20px;
+}
+.vision {
+    font-size: 1.2rem;
+}
+.vision h2 {
+    font-size: 3rem;
+}
+.content-box {
+    padding: 50px;
+    color: $white;
+    position: relative;
+    z-index: 2;
+}
+.content-box-container{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.content-box-container:after {
+    content: ' ';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(50,62,69,.77);
+}
+.witnessing {
+    background-image: url('./assets/images/holding-hands.jpg'); 
+}
+.nurturing {
+    background-image: url('./assets/images/prayer-together.jpg');
+}
+.worshipping {
+    background-image: url('./assets/images/praise-hands.jpg'); 
+}
+
+
+.slider {
+    width: 50%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: .5;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+footer {
+    background-color: $darkgray;
+    color: $white;
+    padding: 40px 0 0 0;
+    // position: absolute;
+    // right: 0;
+    // left: 0;
+    // bottom: 0;
+    // margin-top: 50px;
+}
+footer a {
+    color: $white;
+    text-decoration: none;
+    transition: all ease .3s;
+}
+footer a:hover {
+    color: $white;
+}
+.footer-info {
+    padding-bottom: 10px;
+}
+
+.footer-list {
+    padding-bottom: 30px;
+}
+address {
+    margin-bottom: 0;
+}
+.copyright {
+    background: #1F2530;
+    color: $white;
+    padding: 15px;
+    font-size: 80%;
+}
+.copyright p, .list-inline {margin-bottom: 0;}
+
+.styled-text {
+    font-style: italic;
+}
+
+a {
+    color: $yellow;
+}
+
+.message {
+    height: 150px !important;
+}
+.contact-info {
+    font-size: 1.25rem;
+}
+#contact {
+    padding-top: 60px;
+}
+.dropdown-menu {
+    border-radius: 0;
+    background: $maroon;
+    border: 0;
+}
+.dropdown-menu a {
+    color: $white;
+    transition: all ease .3s;
+}
+.dropdown-menu a:hover {
+    background: $yellow;
+}
+
+.mission-container {
+    background: $white;
+    padding: 100px 80px;
+    
+}
+
+.borderRadius20 {
+    border-radius: 20px;
+}
+.borderRadius10 {
+    border-radius: 10px;
+}
+.padleftright40 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.padtopbottom100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.padbottom40 {
+    padding-bottom: 40px;
+}
+
+.box-container {
+    padding: 25px;
+
+}
+.service-container {
+    overflow: hidden;
+}
+.service-content {
+    padding: 20px
+}

@@ -1,0 +1,40 @@
+{
+  "messages": [
+    {
+      "name": "julius maxwell",
+      "email": "jmax407@gmail.com",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin turpis mauris, aliquam quis vestibulum consectetur, venenatis eget leo. Integer nec neque tellus. Nunc sagittis magna a venenatis placerat. Etiam a erat fringilla metus finibus sodales faucibus a nisl. Suspendisse at dictum sem, a scelerisque ante. Integer diam erat, suscipit ut semper at, eleifend eu quam. Duis ex turpis, aliquam sed eros in, sollicitudin auctor nunc. Ut pellentesque pellentesque nisi vitae elementum. Cras ac faucibus tortor.\n\nSed vitae rhoncus metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce quam velit, convallis non egestas non, porta sed lorem. Nam viverra, mi sit amet fringilla luctus, ipsum justo ullamcorper quam, at sollicitudin dui metus ut sapien. Donec cursus leo nulla, in ullamcorper elit accumsan id. Phasellus sed enim luctus, tristique massa eget, elementum felis. Suspendisse scelerisque massa vitae dapibus porttitor. Donec gravida lacus vitae tellus varius, in pharetra metus accumsan. Phasellus leo sem, pretium ut nunc eu, placerat facilisis ipsum.\n\nNullam ac ante id elit volutpat feugiat nec eu magna. Ut non accumsan lorem. In ut ligula metus. Fusce blandit leo vel turpis mattis ultricies ut quis nulla. Integer iaculis velit non risus vehicula dignissim. Nunc augue turpis, varius a posuere ac, varius non justo. Nullam dictum sem lectus, nec vulputate mauris mollis a. Curabitur ac massa dolor.",
+      "messagePreview": "Lorem ipsum dolor sit amet, co",
+      "read": false,
+      "dateSent": null,
+      "id": 1
+    },
+    {
+      "name": "fresh manny",
+      "email": "bal@ale.com",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin turpis mauris, aliquam quis vestibulum consectetur, venenatis eget leo. Integer nec neque tellus. Nunc sagittis magna a venenatis placerat. Etiam a erat fringilla metus finibus sodales faucibus a nisl. Suspendisse at dictum sem, a scelerisque ante. Integer diam erat, suscipit ut semper at, eleifend eu quam. Duis ex turpis, aliquam sed eros in, sollicitudin auctor nunc. Ut pellentesque pellentesque nisi vitae elementum. Cras ac faucibus tortor.\n\nSed vitae rhoncus metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce quam velit, convallis non egestas non, porta sed lorem. Nam viverra, mi sit amet fringilla luctus, ipsum justo ullamcorper quam, at sollicitudin dui metus ut sapien. Donec cursus leo nulla, in ullamcorper elit accumsan id. Phasellus sed enim luctus, tristique massa eget, elementum felis. Suspendisse scelerisque massa vitae dapibus porttitor. Donec gravida lacus vitae tellus varius, in pharetra metus accumsan. Phasellus leo sem, pretium ut nunc eu, placerat facilisis ipsum.\n\nNullam ac ante id elit volutpat feugiat nec eu magna. Ut non accumsan lorem. In ut ligula metus. Fusce blandit leo vel turpis mattis ultricies ut quis nulla. Integer iaculis velit non risus vehicula dignissim. Nunc augue turpis, varius a posuere ac, varius non justo. Nullam dictum sem lectus, nec vulputate mauris mollis a. Curabitur ac massa dolor.",
+      "messagePreview": "Lorem ipsum dolor sit amet, co",
+      "read": false,
+      "dateSent": "2022-11-04T02:59:52.935Z",
+      "id": 2
+    },
+    {
+      "name": "fresh manny",
+      "email": "bal@ale.com",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin turpis mauris, aliquam quis vestibulum consectetur, venenatis eget leo. Integer nec neque tellus. Nunc sagittis magna a venenatis placerat. Etiam a erat fringilla metus finibus sodales faucibus a nisl. Suspendisse at dictum sem, a scelerisque ante. Integer diam erat, suscipit ut semper at, eleifend eu quam. Duis ex turpis, aliquam sed eros in, sollicitudin auctor nunc. Ut pellentesque pellentesque nisi vitae elementum. Cras ac faucibus tortor.\n\nSed vitae rhoncus metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce quam velit, convallis non egestas non, porta sed lorem. Nam viverra, mi sit amet fringilla luctus, ipsum justo ullamcorper quam, at sollicitudin dui metus ut sapien. Donec cursus leo nulla, in ullamcorper elit accumsan id. Phasellus sed enim luctus, tristique massa eget, elementum felis. Suspendisse scelerisque massa vitae dapibus porttitor. Donec gravida lacus vitae tellus varius, in pharetra metus accumsan. Phasellus leo sem, pretium ut nunc eu, placerat facilisis ipsum.\n\nNullam ac ante id elit volutpat feugiat nec eu magna. Ut non accumsan lorem. In ut ligula metus. Fusce blandit leo vel turpis mattis ultricies ut quis nulla. Integer iaculis velit non risus vehicula dignissim. Nunc augue turpis, varius a posuere ac, varius non justo. Nullam dictum sem lectus, nec vulputate mauris mollis a. Curabitur ac massa dolor.",
+      "messagePreview": "Lorem ipsum dolor sit amet, co",
+      "read": false,
+      "dateSent": "2022-11-04T03:02:13.110Z",
+      "id": 3
+    },
+    {
+      "name": "juliu max",
+      "email": "die@ao.com",
+      "body": "venenatis placerat. Etiam a erat fringilla metus finibus sodales faucibus a nisl. Suspendisse at dictum sem, a scelerisque ante. Integer diam erat, suscipit ut semper at, eleifend eu quam. Duis ex turpis, aliquam sed eros in, sollicitudin auctor nunc. Ut pellentesque pellentesque nisi vitae elementum. Cras ac faucibus tortor.\n\nSed vitae rhoncus metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce quam velit, convallis non egestas non, porta sed lorem. Nam viverra, mi sit amet fringilla luctus, ipsum justo ullamcorper quam, at sollicitudin dui metus ut sapien. Donec cursus leo nulla, in ullamcorper elit accumsan id. Phasellus sed enim luctus, tristique massa eget, elementum felis. Suspendisse scelerisque massa vitae dapibus porttitor. Donec gravida lacus vitae tellus varius, in pharetra metus accumsan. Phasellus leo sem, pretium ut nunc eu, placerat facilisis ipsum.\n\nNullam ac ante id elit volutpat feugiat nec eu magna. Ut non accumsan lorem. In ut ligula metus. Fusce blandit leo vel turpis mattis ultricies ",
+      "messagePreview": "venenatis placerat. Etiam a er",
+      "read": false,
+      "dateSent": "2022-11-04T03:03:02.077Z",
+      "id": 4
+    }
+  ]
+}
