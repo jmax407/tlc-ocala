@@ -27,14 +27,14 @@ const Mission = () => {
                 </div>
                 <div className='col-lg-12'>
                   <div className='box-container bg-white box-shadow mb-4 borderRadius10'>
-                  <i class="fa-solid fa-church icon2x font-maroon"></i>
+                  <i className="fa-solid fa-church icon2x font-maroon"></i>
                     <h4 className='font-maroon'>By Nurturing</h4>
                     <p>Ministries to edify and build the body of Christ.</p>
                   </div>
                 </div>
                 <div className='col-lg-12'>
                   <div className='box-container bg-white box-shadow borderRadius10'>
-                  <i class="fa-solid fa-hands-praying icon2x font-maroon"></i>
+                  <i className="fa-solid fa-hands-praying icon2x font-maroon"></i>
                     <h4 className='font-maroon'>By Worshipping</h4>
                     <p>
                       Gathering corporately in praise to the true and Living God
