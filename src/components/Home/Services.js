@@ -6,7 +6,7 @@ import wednesdayBibleStudy from '../../assets/images/biblestudy.jpg';
 
 const Services = () => {
   return (
-    <section id='services' className='padtopbottom100 bg-tan'>
+    <section id='services' className='padtop100'>
         <div className='container py-5'>
           <div className='row'>
             <div className='col-lg-4 pb-4'>

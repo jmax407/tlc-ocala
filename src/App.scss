@@ -1,32 +1,17 @@
+:root {
+    --darkGreen: #101828;
+    --white: #FFFFFF;
+    --darkgray: #282F3B;
+    --lightGrey: #b8c2c3;
+    --yellow: #e0bc3f;
+    --darkyellow: #987600;
+    --tan: #f7f3e7;
+    --tandark: #eedfc9;
+    --mintGreen: #bee1e6;
+    --aquaGreen: #006d77;
+}
 
-$maroon: #8b0b0b;
-$white: #FFFFFF;
-$darkgray: #282F3B;
-$lightgray: #a6a6a6;
-$yellow: #e0bc3f;
-$darkyellow: #987600;
-$tan: #f7f3e7;
-$tandark: #eedfc9;
 
-.bg-yellow {
-    background-color: $yellow !important;
-    color: $darkgray;
-}
-.bg-yellow a {
-    color: $maroon !important;
-    font-weight: 800;
-}
-.bg-yellow a:hover {
-    color: $white !important;
-}
-.bg-white {
-    background-color: $white;
-    color: $darkgray;
-}
-.bg-tan {
-    background-color: $tan;
-    color: $darkgray;
-}
 
 html, body, #root {
     width: 100%;
@@ -42,8 +27,7 @@ body {
   font-size: 16px;
   font-family: 'Hanken Grotesk', sans-serif;
   font-weight: 500;
-  background: #f7f3e7;
-  padding-top:90px;
+//   background: #f7f3e7;
 }
 
 #root {
@@ -52,62 +36,6 @@ body {
     flex-direction: column;
 }
 
-.navbar {
-    background: $white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.navbar .nav-item .dropdown-menu{ transition: all ease .3s; }
-.navbar .nav-item:hover .dropdown-menu{ display: block; }
-
-
-
-.btn-primary {
-    background: $maroon;
-    border: $maroon;
-    font-size: 1.25rem;
-}
-.btn-outline-primary {
-    border-color: $maroon;
-}
-.btn-outline-secondary {
-    border-color: $yellow;
-}
-.btn-primary:hover {
-    background-color: $maroon !important;
-}
-.btn-secondary {
-    background: $yellow;
-    border: $darkyellow;
-    color: $darkgray;
-}
-.btn-secondary:hover {
-    background-color: #ae8a0c !important;
-}
-.btn-rounded {
-    border-radius: 40px;
-}
-.btn-main {
-    background: $white;
-    border-radius: 50px;
-    color: $maroon;
-    padding: 10px 25px;
-    border: 1px solid $tandark;
-}
-.btn-main:hover {
-    border-color: $maroon !important;
-    background: $white !important;
-}
-.btn-paypal {
-    display: block;
-    position: relative;
-    min-width: 150px;
-    min-height: 47px;
-}
-.btn-paypal img { opacity: 0; position: absolute; top: 0; left: 0;}
-.btn-link {
-    color: $yellow;
-}
 .nav-link {
     border-bottom: 2px solid transparent;
     font-size: 1.25rem;
@@ -116,7 +44,7 @@ body {
 }
 .nav-link:hover {
     cursor: pointer;
-    border-bottom: 2px solid $yellow;
+    border-bottom: 2px solid var(--aquaGreen);
 }
 section.vh100 {
     min-height: 700px;
@@ -127,8 +55,9 @@ section.vh100 {
     min-height: 50vh;
 }
 .intro {
-    // background-image: url('./assets/images/intro-bg.jpg');
-    // background-size: cover;
+    // background-image: url('./assets/images/nature-bg.jpg');
+    // background-size:auto;
+    background-color: var(--mintGreen);
     font-size: 1.5rem;
 }
 
@@ -139,7 +68,7 @@ section.vh100 {
     background-repeat: no-repeat;
     background-position: bottom center;
     font-size: 1.5rem;
-    color: $white;
+    color: var(--white);
 }
 h1,h2,h3,h4 {
     font-weight: 800;
@@ -149,9 +78,43 @@ h2 {font-size: 3rem;}
 h3 {font-size: 2.5rem;
     margin-bottom: 15px;
 }
+h3 span.accent {
+    font-size: 1.5rem;
+    display: inline;
+    font-weight: 100;
+    background-color: var(--mintGreen);
+    padding: 5px 25px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+.large-text {
+    font-size: 1.35rem;
+    line-height: 1.85rem;
+}
 .accent {
     display: block;
     margin-bottom: 10px;
+}
+.icon {
+    background-color: var(--aquaGreen);
+    border-radius: 100%;
+    color: var(--white);
+    height: 75px;
+    width: 75px;
+    font-size: 1.75rem;
+}
+.icon-left {
+    position: absolute;
+    width: 75px;
+    top: 0;
+    left: 0;
+}
+.list-icons {
+    display: block;
+    position: relative;
+}
+.item-icon {
+    padding: 10px 0 20px 90px;
 }
 .give-amount {
     font-size: 4rem;
@@ -174,27 +137,34 @@ h3 {font-size: 2.5rem;
 .section-title:after {
     display: block;
     content: ' ';
-    background: $maroon;
+    background: var(--darkGreen);
     height: 4px;
     width: 100px;
     margin: 20px 0;
 }
-
+.section-title.text-center:after {
+    margin: 20px auto;
+}
 .nobreak {
     white-space:nowrap;
 }
 .btn-tlc {
-    padding: 20px;
+    padding: 15px 30px;
 }
 .vision {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    line-height: 2.25rem;
 }
 .vision h2 {
-    font-size: 3rem;
+    font-size: 5rem;
+}
+.leadership-container {
+background-color: var(--mintGreen);
+padding: 80px;
 }
 .content-box {
     padding: 50px;
-    color: $white;
+    color: var(--white);
     position: relative;
     z-index: 2;
 }
@@ -258,23 +228,14 @@ h3 {font-size: 2.5rem;
   opacity: 1;
 }
 
-footer {
-    background-color: $darkgray;
-    color: $white;
-    padding: 40px 0 0 0;
-    // position: absolute;
-    // right: 0;
-    // left: 0;
-    // bottom: 0;
-    // margin-top: 50px;
-}
+
 footer a {
-    color: $white;
+    color: var(--aquaGreen);
     text-decoration: none;
     transition: all ease .3s;
 }
 footer a:hover {
-    color: $white;
+    color: var(--darkGreen);
 }
 .footer-info {
     padding-bottom: 10px;
@@ -287,8 +248,8 @@ address {
     margin-bottom: 0;
 }
 .copyright {
-    background: #1F2530;
-    color: $white;
+    background: var(--mintGreen);
+    color: var(--darkGreen);
     padding: 15px;
     font-size: 80%;
 }
@@ -299,7 +260,8 @@ address {
 }
 
 a {
-    color: $yellow;
+    color: var(--aquaGreen);
+    font-weight: 600;
 }
 
 .message {
@@ -308,24 +270,26 @@ a {
 .contact-info {
     font-size: 1.25rem;
 }
-#contact {
-    padding-top: 60px;
+.contact {
+    background-color: var(--mintGreen);
+    padding: 80px;
+    border-radius: 20px;
 }
 .dropdown-menu {
     border-radius: 0;
-    background: $maroon;
+    background: var(--darkGreen);
     border: 0;
 }
 .dropdown-menu a {
-    color: $white;
+    color: var(--white);
     transition: all ease .3s;
 }
 .dropdown-menu a:hover {
-    background: $yellow;
+    background: var(--yellow);
 }
 
 .mission-container {
-    background: $white;
+    background: var(--white);
     padding: 100px 80px;
     
 }
@@ -335,13 +299,17 @@ a {
 }
 .borderRadius10 {
     border-radius: 10px;
+    overflow: hidden;
 }
 .padleftright40 {
     padding-left: 40px;
     padding-right: 40px;
 }
-.padtopbottom100 {
+.padtop100 {
     padding-top: 100px;
+
+}
+.padbottom100 {
     padding-bottom: 100px;
 }
 .padbottom40 {
@@ -362,5 +330,9 @@ a {
     font-size: 200%;
 }
 .font-maroon {
-    color: $maroon;
+    color: var(--darkGreen);
+}
+
+hr {
+    border-color: var(--lightGrey);
 }

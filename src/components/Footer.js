@@ -5,16 +5,26 @@ const Footer = () => {
     let year = objectDate.getFullYear();
   return (
 
-    <footer className='mt-auto'>
+    <footer className='mt-auto padtop100'>
     <div className="container">
-        <div className="row d-flex justify-content-between pb-4">
-            <div className="col-lg-5">
-                <h4>About The Life Center Church of Ocala</h4>
+        <div className="row">
+            <div className="col-lg-8">
+                <h4>The Life Center Church Of Ocala</h4>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-lg-12">
+            <hr />
+            </div>
+        </div>
+        <div className="row d-flex justify-content-between py-4">
+           
+            <div className="col-lg-6">
                 <p>
                    The Life Center Church of Ocala, under the headship of Jesus Christ, our Lord and Savior, we believe we are called to serve God in Witnessing, Serving, and Worship!
                 </p>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-4 offset-lg-2">
                 <h4>Get in Touch</h4>
                 <div className="footer-info d-flex align-items-start">
                     <span className="pe-3"><i className="fa-solid fa-location-dot"></i></span>

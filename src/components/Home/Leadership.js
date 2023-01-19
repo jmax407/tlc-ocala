@@ -1,6 +1,6 @@
 import React from 'react';
-import './card.css'
-import Card from './Card';
+import '../Card/card.css'
+import Card from '../Card/Card';
 
 import pastorJoe from '../../assets/images/pastor-joe-maxwell-crop.jpg';
 import bishopHenson from '../../assets/images/bishop-henson-lady-van.jpg';
@@ -24,10 +24,13 @@ const Pastors = [
 
 const Leadership = () => {
     return (
-        <section id="leadership" className='padtopbottom100 bg-white'>
+        <section id="leadership" className='leadership-container'>
         <div className="container">
-            <div className="row pb-5">
-                <div className="col-lg-8">
+            <div className="row">
+                <h2 className='section-title text-center pb-5'>Our Leadership</h2>
+            </div>
+            <div className="row pb-5 d-flex justify-content-center">
+                <div className="col-lg-10">
                     <div className="row">
                     {
                     Pastors.map((pastor) => {
@@ -40,9 +43,6 @@ const Leadership = () => {
                     })
                 }
                     </div>
-                </div>
-                <div className="col-lg-4">
-                    <h2 className='section-title'>Our Leadership</h2>
                 </div>
             </div>
         </div>

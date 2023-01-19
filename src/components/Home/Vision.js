@@ -2,7 +2,7 @@ import React from 'react'
 
 const Vision = () => {
   return (
-    <section id='vision' className='vision padtopbottom100 bg-yellow'>
+    <section id='vision' className='vision padtop100'>
         <div className='container'>
           <div className='row d-flex justify-content-center'>
             <div className='col-lg-8 text-center py-2'>

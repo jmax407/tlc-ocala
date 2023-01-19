@@ -2,12 +2,13 @@ import PayPalCompontent from '../components/PayPalCompontent'
 import background from '../assets/images/handout.jpg'
 import { useEffect } from 'react'
 
-const Give = ({isHome, setIsHome}) => {
+const Give = ({isHome, setIsHome, isGivePage, setIsGivePage }) => {
     useEffect(() => {
         setIsHome(false)
+        setIsGivePage(true)
     }, [])
 
-    
+
   return (
     <>
       <section
@@ -35,7 +36,7 @@ const Give = ({isHome, setIsHome}) => {
         </div>
       </section>
 
-      <section id='how-to-give' className='padtopbottom100'>
+      <section id='how-to-give' className='padtop100'>
         <div className='container'>
           <div className='row d-flex justify-content-center'>
             <div className='col-lg-9 text-center'>

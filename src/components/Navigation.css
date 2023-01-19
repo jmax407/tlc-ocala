@@ -1,0 +1,17 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    z-index: 1020;
+}
+.navbar {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar .nav-item .dropdown-menu{ transition: all ease .3s; }
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
+.nav-text-light a {
+    color: var(--white)
+}

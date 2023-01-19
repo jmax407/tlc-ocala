@@ -1,0 +1,45 @@
+.idk {
+    margin: 1rem 0;
+  }
+  
+  .idk label,
+  .idk input,
+  .idk textarea {
+    display: block;
+  }
+  
+  .idk label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .idk input,
+  .idk textarea {
+    width: 100%;
+    font: inherit;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    padding: 0.15rem 0.25rem;
+  }
+  
+  .idk input:focus,
+  .idk textarea:focus {
+    outline: none;
+    background: #ebebeb;
+    border-color: #510077;
+  }
+  
+  .form-control--invalid label,
+  .form-control--invalid p {
+    color: red;
+  }
+  
+  .form-control--invalid input,
+  .form-control--invalid textarea {
+    border-color: red;
+    background: #ffd1d1;
+  }
+
+  .btn:disabled {
+    background-color: #222;
+  }

@@ -31,11 +31,11 @@ const showMore = (e) => {
           {isClosed ? 
           (<>
             <p>{previewText}</p> 
-            <span className='showToggle' onClick={showMore}>Show More</span>
+            <span className='showToggle' onClick={showMore}>Show More <i className="fa-solid fa-chevron-down"></i></span>
           </>):
           <>
             <p>{pastor.text}</p>
-            <span className='showToggle' onClick={showLess}>Show Less</span>
+            <span className='showToggle' onClick={showLess}>Show Less <i className="fa-solid fa-chevron-up"></i></span>
           </>
           }
         </div>
