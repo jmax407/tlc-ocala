@@ -12,6 +12,9 @@ header {
 }
 .navbar .nav-item .dropdown-menu{ transition: all ease .3s; }
 .navbar .nav-item:hover .dropdown-menu{ display: block; }
-.nav-text-light a {
+.nav-text-light a,.nav-text-light a:visited {
     color: var(--white)
+}
+.nav-text-light a:hover {
+    color: var(--aquaGreen);
 }

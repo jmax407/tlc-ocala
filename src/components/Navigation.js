@@ -27,9 +27,9 @@ const Navigation = ({isHome, setIsHome, isGivePage, setIsGivePage}) => {
           </NavDropdown>
           ): <Nav.Link as={Link} to="/">Home</Nav.Link> }
             <Nav.Link as={Link} to="/Give">Give</Nav.Link>
-            <Nav.Link as={Link} to="/Blog" onClick={() => {setIsHome(false)}}>Blog</Nav.Link>
+            {/* <Nav.Link as={Link} to="/Blog" onClick={() => {setIsHome(false)}}>Blog</Nav.Link> */}
             <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
-            <Nav.Link as={Link} to="/Login"><i className="fa-solid fa-user"></i></Nav.Link>
+            {/* <Nav.Link as={Link} to="/Login"><i className="fa-solid fa-user"></i></Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
