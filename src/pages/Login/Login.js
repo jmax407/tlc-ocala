@@ -3,7 +3,7 @@ import Input from '../../components/FormElements/Input';
 import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from '../../utils/validators';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'
-
+import Copyright from '../../components/Footer/Copyright';
 import './Login.css';
 import { useForm } from '../../components/hooks/form-hook';
 import { AuthContext } from '../../components/context/auth-context';
@@ -30,11 +30,12 @@ const Login = () => {
     event.preventDefault();
     console.log(formState.inputs);
     auth.login()
-    navigate('/')
+    navigate('/dashboard')
   };
 
   return (
-    <div className='vh-100 d-flex justify-content-center align-items-center'>
+    <>
+      <div className='vh-100 d-flex justify-content-center align-items-center'>
       <div className='login-box'>
         <form onSubmit={loginHandler}>
           <div className='mb-3'>
@@ -71,6 +72,10 @@ const Login = () => {
         </form>
       </div>
     </div>
+    {/* <footer className='mt-auto padtop100'>
+      <Copyright />
+    </footer> */}
+    </>
   );
 };
 

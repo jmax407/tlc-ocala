@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+
 
 import Leadership from '../components/Home/Leadership';
 import Mission from '../components/Home/Mission';
@@ -8,11 +8,8 @@ import Services from '../components/Home/Services';
 
 
 
-const Home = ({ isHome, setIsHome, setIsGivePage }) => {
-  useEffect(() => {
-    setIsHome(true);
-    setIsGivePage(false)
-  });
+const Home = () => {
+
 
   return (
     <>

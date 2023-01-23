@@ -33,7 +33,7 @@ const formReducer = (state, action) => {
 };
 
 
-const Contact = ({ setIsHome, setIsGivePage }) => {
+const Contact = () => {
   const [formState, dispatch] = useReducer(formReducer, {
     inputs: {
       name: {
@@ -52,10 +52,6 @@ const Contact = ({ setIsHome, setIsGivePage }) => {
     isValid: false,
   });
 
-  useEffect(() => {
-    setIsHome(false);
-    setIsGivePage(false);
-  });
 
   const inputHandler = useCallback((id, value, isValid) => {
     dispatch({

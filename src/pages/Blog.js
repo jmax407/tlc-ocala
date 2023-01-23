@@ -35,11 +35,8 @@ const DUMMY_POSTS = [
   }
 ]
 
-const Blog = ({setIsHome, setIsGivePage}) => {
-  useEffect(() => {
-    setIsHome(false);
-    setIsGivePage(false)
-  });
+const Blog = () => {
+
 
   return (
     <section className='py-5 container'>

@@ -1,0 +1,27 @@
+.dashboard-container {
+    background-color: var(--mintGreen);
+}
+.dashboard-menu {
+    background-color: var(--aquaGreen);
+}
+.dashboard-navigation {
+    list-style: none;
+    color: var(--white);
+    padding: 0;
+}
+.dashboard-navigation a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 300;
+    opacity: .5;
+    transition: all ease .3s;
+}
+.dashboard-navigation a:hover {
+    opacity: 1;
+}
+.dashboard-navigation li {
+    padding: 1rem
+}
+.dashboard-navigation li:before {
+    content: "";
+}

@@ -1,11 +1,7 @@
 import React from 'react'
 
-const Footer = () => {
-    let objectDate = new Date();
-    let year = objectDate.getFullYear();
+const MainFooter = () => {
   return (
-
-    <footer className='mt-auto padtop100'>
     <div className="container">
         <div className="row">
             <div className="col-lg-8">
@@ -49,19 +45,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    
-    <div className="copyright">
-        <div className="container">
-            <div className="row">
-                <div className="col d-flex justify-content-between">
-                    <p>Copyright © The Life Center Church of Ocala {year}. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
   )
 }
 
-export default Footer
+export default MainFooter

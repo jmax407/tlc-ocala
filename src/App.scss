@@ -36,16 +36,8 @@ body {
     flex-direction: column;
 }
 
-.nav-link {
-    border-bottom: 2px solid transparent;
-    font-size: 1.25rem;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-}
-.nav-link:hover {
-    cursor: pointer;
-    border-bottom: 2px solid var(--aquaGreen);
-}
+
+
 section.vh100 {
     min-height: 700px;
 

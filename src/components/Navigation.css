@@ -1,12 +1,13 @@
+
+
 header {
-    position: absolute;
     top: 0;
     left: 0;
     right:0;
     z-index: 1020;
+    background-color: var(--aquaGreen);
 }
 .navbar {
-
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -16,5 +17,16 @@ header {
     color: var(--white)
 }
 .nav-text-light a:hover {
-    color: var(--aquaGreen);
+    color: var(--darkGreen);
+}
+
+.nav-link {
+    border-bottom: 2px solid transparent;
+    font-size: 1rem !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.nav-link:hover {
+    cursor: pointer;
+    border-bottom: 2px solid var(--darkGreen) !important;
 }
