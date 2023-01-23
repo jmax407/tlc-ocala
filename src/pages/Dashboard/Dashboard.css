@@ -15,9 +15,23 @@
     font-weight: 300;
     opacity: .5;
     transition: all ease .3s;
+    position: relative;
 }
 .dashboard-navigation a:hover {
     opacity: 1;
+}
+.dashboard-navigation a.active {
+    opacity: 1;
+}
+.dashboard-navigation a:before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: var(--aquaGreen);
+}
+.dashboard-navigation a.active:before {
+    background-color: var(--mintGreen);
 }
 .dashboard-navigation li {
     padding: 1rem
