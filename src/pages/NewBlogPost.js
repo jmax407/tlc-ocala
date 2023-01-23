@@ -1,12 +1,18 @@
-import React from 'react';
-
+import { useEffect } from 'react';
+import { Button } from 'react-bootstrap';
+import { useForm } from '../components/hooks/form-hook';
 import Input from '../components/FormElements/Input';
-import Button from '../components/FormElements/Button';
+// import Button from '../components/FormElements/Button';
 
 import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH } from '../utils/validators';
-import { useForm } from '../components/hooks/form-hook';
 
-const NewBlogPost = () => {
+
+const NewBlogPost = ({ setIsHome, setIsGivePage }) => {
+  useEffect(() => {
+    setIsHome(false);
+    setIsGivePage(false);
+  });
+
   const [formState, inputHandler] = useForm(
     {
       title: {
@@ -17,6 +23,10 @@ const NewBlogPost = () => {
         value: '',
         isValid: false,
       },
+      time: {
+        value: new Date().toDateString(),
+        isValid: true
+      }
     },
     false
   );
@@ -28,7 +38,7 @@ const NewBlogPost = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='container padtop100'>
       <div className='row d-flex justify-content-center'>
         <div className='col-md-5'>
           <form className='py-5' onSubmit={postSubmitHandler}>
@@ -53,13 +63,13 @@ const NewBlogPost = () => {
                 onInput={inputHandler}
               />
             </div>
-            <button
-              className='btn btn-primary btn-tlc'
+            <Button
               type='submit'
               disabled={!formState.isValid}
+              variant='primary'
             >
-              Add Post
-            </button>
+              <i className='fa-solid fa-file-circle-plus'></i> Add Post
+            </Button>
           </form>
         </div>
       </div>

@@ -2,11 +2,11 @@ import PayPalCompontent from '../components/PayPalCompontent'
 import background from '../assets/images/handout.jpg'
 import { useEffect } from 'react'
 
-const Give = ({isHome, setIsHome, isGivePage, setIsGivePage }) => {
+const Give = ({setIsHome, setIsGivePage }) => {
     useEffect(() => {
         setIsHome(false)
         setIsGivePage(true)
-    }, [])
+    })
 
 
   return (

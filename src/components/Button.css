@@ -23,7 +23,7 @@
 .btn-secondary:hover {
     background: var(--white) !important;
     color: var(--aquaGreen);
-    border-color: transparent;
+    border-color: var(--aquaGreen);
 }
 .btn-alt {
     background-color: var(--white);
@@ -66,7 +66,7 @@
 }
 
 .btn-link {
-    color: var(--yellow);
+    color: var(--bs-nav-link-hover-color);
 }
 
 .top-btn {

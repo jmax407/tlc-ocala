@@ -12,7 +12,7 @@ const Home = ({ isHome, setIsHome, setIsGivePage }) => {
   useEffect(() => {
     setIsHome(true);
     setIsGivePage(false)
-  }, []);
+  });
 
   return (
     <>

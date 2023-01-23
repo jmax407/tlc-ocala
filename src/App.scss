@@ -24,7 +24,7 @@ body {
   position: relative;
   margin: 0;
   min-height: 100%;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Hanken Grotesk', sans-serif;
   font-weight: 500;
 //   background: #f7f3e7;
@@ -150,6 +150,11 @@ h3 span.accent {
 }
 .btn-tlc {
     padding: 15px 30px;
+}
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+    background-color: var(--darkgray);
+    border-color: var(--darkgray);
+    opacity: .25;
 }
 .vision {
     font-size: 1.7rem;

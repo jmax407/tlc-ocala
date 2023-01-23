@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 
-import pastorAnd1stLadyPhoto from '../../assets/images/pastor-and-1stlady.png';
+// import pastorAnd1stLadyPhoto from '../../assets/images/pastor-and-1stlady.png';
 
 const Intro = () => {
   return (

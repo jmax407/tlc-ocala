@@ -1,77 +1,139 @@
-import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { useEffect, useCallback, useReducer } from 'react';
+import { Button } from 'react-bootstrap';
 
-const Contact = ({isHome, setIsHome, setIsGivePage}) => {
+import Input from '../components/FormElements/Input';
+import {
+  VALIDATOR_REQUIRE,
+  VALIDATOR_EMAIL,
+  VALIDATOR_MINLENGTH,
+} from '../utils/validators';
+
+const formReducer = (state, action) => {
+  switch (action.type) {
+    case 'INPUT_CHANGE':
+      let formIsValid = true;
+      for (const inputId in state.inputs) {
+        if (inputId === action.inputId) {
+          formIsValid = formIsValid && action.isValid;
+        } else {
+          formIsValid = formIsValid && state.inputs[inputId].isValid;
+        }
+      }
+      return {
+        ...state,
+        inputs: {
+          ...state.inputs,
+          [action.inputId]: { value: action.value, isValid: action.isValid },
+        },
+        isValid: formIsValid,
+      };
+    default:
+      return state;
+  }
+};
+
+
+const Contact = ({ setIsHome, setIsGivePage }) => {
+  const [formState, dispatch] = useReducer(formReducer, {
+    inputs: {
+      name: {
+        value: '',
+        isValid: false,
+      },
+      email: {
+        value: '',
+        isValid: false,
+      },
+      message: {
+        value: '',
+        isValid: false,
+      },
+    },
+    isValid: false,
+  });
+
   useEffect(() => {
-    setIsHome( false);
-    setIsGivePage(false)
+    setIsHome(false);
+    setIsGivePage(false);
+  });
+
+  const inputHandler = useCallback((id, value, isValid) => {
+    dispatch({
+      type: 'INPUT_CHANGE',
+      value: value,
+      isValid: isValid,
+      inputId: id,
+    });
   }, []);
 
-  const [fName, setFName] = useState('');
-  const [lName, setLName] = useState('');
-  const [email, setEmail] = useState('');
-  const [body, setBody] = useState('');
-  const [read, setRead] = useState(false)
-  const [hasSent, setHasSent] = useState(false);
+  const contactSubmitHandler = event => {
+    event.preventDefault();
 
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const messagePreview = body.slice(0,30)
-    console.log('form submitted')
-    const name = fName + ' ' + lName
-    const dateSent = new Date()
-    const newMessage = { name, email , body, messagePreview, read, dateSent}
-    
-    console.log(newMessage);
-
-    fetch('http://localhost:8000/messages', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json"},
-      body: JSON.stringify(newMessage)
-    }).then(() => {
-      setHasSent(true)
-    })
-
-    
+    console.log(formState.inputs);
   }
-  return (
-    <div id="contact" className='container padtop100'>
-      <div className="contact">
-      <div className="row">
-        <div className="col-lg-6 pe-5">
-          <h2>Contact Us</h2>
-          <p>We are delighted that you have taken the time to visit our church's website. If you have any questions or would like to learn more about our community and the services we offer, please fill out the contact form. Whether you're looking for information on upcoming events, would like to speak with a member of our clergy, or have any other inquiry, we are here to assist you. We will respond to your message as soon as possible and look forward to connecting with you. Thank you for your interest in our church.</p>
-        </div>
-        <div className="col-lg-6 col-md-10 col-sm-12">
-        <form onSubmit={handleSubmit}>
-        <div className="mb-3 row">
-          <div className="col">
-            <input type="text" required value={fName} className="form-control" placeholder="First Name" aria-label="First Name" onChange={(e) => setFName(e.target.value)} />
-          </div>
-          <div className="col">
-            <input type="text" required value={lName} className="form-control" placeholder="Last Name" aria-label="Last Name" onChange={(e) => setLName(e.target.value)} />
-          </div>
-        </div>
-        <div className="mb-3 row">
-          <div className="col">
-            <input type="email" required value={email} className="form-control" placeholder="Email@address.com" aria-label="Email Address"onChange={(e) => setEmail(e.target.value)} />
-          </div>
-        </div>
-        <div className="mb-3 row">
-          <div className="col">
-            <textarea required value={body} className="form-control" rows="4" onChange={(e) => setBody(e.target.value)}></textarea>
-          </div>
-        </div>
-        <button className="btn btn-primary">Send Message</button>
-      </form>
-        </div>
-      </div>
-      </div>
-      
-      
-    </div>
-  )
-}
 
-export default Contact
+  return (
+    <div id='contact' className='container padtop100'>
+      <div className='contact'>
+        <div className='row'>
+          <div className='col-lg-6 pe-5'>
+            <h2>Contact Us</h2>
+            <p>
+              We are delighted that you have taken the time to visit our
+              church's website. If you have any questions or would like to learn
+              more about our community and the services we offer, please fill
+              out the contact form. Whether you're looking for information on
+              upcoming events, would like to speak with a member of our clergy,
+              or have any other inquiry, we are here to assist you. We will
+              respond to your message as soon as possible and look forward to
+              connecting with you. Thank you for your interest in our church.
+            </p>
+          </div>
+          <div className='col-lg-6 col-md-10 col-sm-12'>
+            <form onSubmit={contactSubmitHandler}>
+              <div className='mb-3 row'>
+                <Input
+                  id='name'
+                  type='text'
+                  element='input'
+                  label='Name'
+                  placeholder='Your Name'
+                  validators={[VALIDATOR_REQUIRE()]}
+                  errorText='Please enter your name'
+                  onInput={inputHandler}
+                />
+              </div>
+              <div className='mb-3 row'>
+                <Input
+                  id='email'
+                  type='text'
+                  element='input'
+                  label='Email Address'
+                  placeholder='Your Eamil Address'
+                  validators={[VALIDATOR_EMAIL()]}
+                  errorText='Please enter your name'
+                  onInput={inputHandler}
+                />
+              </div>
+              <div className='mb-3 row'>
+                <Input
+                  id='message'
+                  type='text'
+                  label='Message'
+                  placeholder='Message'
+                  validators={[VALIDATOR_MINLENGTH(10)]}
+                  errorText='Message too short, please enter valid message'
+                  onInput={inputHandler}
+                />
+              </div>
+
+              <Button type="submit" disabled={!formState.isValid} variant='primary'><i className="fa-solid fa-paper-plane"></i> Send Message</Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
