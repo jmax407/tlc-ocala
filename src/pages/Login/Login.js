@@ -35,8 +35,8 @@ const Login = () => {
 
   return (
     <>
-      <div className='vh-100 d-flex justify-content-center align-items-center'>
-      <div className='login-box'>
+      <div className='d-flex justify-content-center align-items-center padtop100'>
+      <div className='login-box mb-5'>
         <form onSubmit={loginHandler}>
           <div className='mb-3'>
             <h2>Login required</h2>
@@ -72,9 +72,9 @@ const Login = () => {
         </form>
       </div>
     </div>
-    {/* <footer className='mt-auto padtop100'>
+    <footer className='mt-auto padtop100 login-footer'>
       <Copyright />
-    </footer> */}
+    </footer>
     </>
   );
 };

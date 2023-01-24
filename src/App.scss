@@ -245,13 +245,15 @@ address {
     margin-bottom: 0;
 }
 .copyright {
-    background: var(--mintGreen);
+    background-color: var(--mintGreen);
     color: var(--darkGreen);
     padding: 15px;
     font-size: 80%;
 }
 .copyright p, .list-inline {margin-bottom: 0;}
-
+.login-footer .copyright {
+    background-color: transparent !important;
+}
 .styled-text {
     font-style: italic;
 }
@@ -282,7 +284,7 @@ a {
     transition: all ease .3s;
 }
 .dropdown-menu a:hover {
-    background: var(--yellow);
+    background: var(--mintGreen);
 }
 
 .mission-container {

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import 'animate.css';
 import './components/Button.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { useState, useCallback } from 'react';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
@@ -19,7 +19,6 @@ import TopBtn from './components/TopBtn';
 import { AuthContext } from './components/context/auth-context';
 import Dashboard from './pages/Dashboard/Dashboard';
 import NotFound from './pages/NotFound';
-import { CurrentPageContext } from './components/context/currentPage-context';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,6 +29,8 @@ function App() {
     setIsLoggedIn(false);
   }, []);
 
+  let location = useLocation();
+  location = location.pathname;
 
   let routes;
   if (isLoggedIn) {
@@ -39,15 +40,15 @@ function App() {
         <Route path='/give' element={<Give />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/blog'>
-          <Route index element={ <Blog />} />
-          <Route path='new' element={ <NewBlogPost />} />
+          <Route index element={<Blog />} />
+          <Route path='new' element={<NewBlogPost />} />
           <Route path=':postId' element={<Post />} />
           <Route path=':postId/edit' element={<UpdateBlogPost />} />
         </Route>
         <Route path='/messages' element={<Messages />} />
         <Route path='/messages/:postId' element={<Messages />} />
         <Route path='/dashboard' element={<Dashboard />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </>
     );
   } else {
@@ -59,29 +60,22 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/blog/:postId' element={<Post />} />
         <Route path='/login' element={<Login />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </>
     );
   }
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}>
-        
-      <Router>
-        {!isLoggedIn && (
-          <Navigation />
-        )}
-        
-        <div className='content'>
-          <Routes>{routes}</Routes>
-        </div>
-        {!isLoggedIn && (
-          <Footer />
-        )}
-        {!isLoggedIn && (
-        <TopBtn />
-        )}
-      </Router>
+      value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
+    >
+      {!isLoggedIn && <Navigation />}
+
+      <div className='content'>
+        <Routes>{routes}</Routes>
+      </div>
+
+      {!isLoggedIn && location !== '/login' && <Footer />}
+      {!isLoggedIn && location === '/' && <TopBtn />}
     </AuthContext.Provider>
   );
 }

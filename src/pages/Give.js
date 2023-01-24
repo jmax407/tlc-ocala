@@ -2,6 +2,7 @@ import PayPalCompontent from '../components/PayPalCompontent'
 import background from '../assets/images/handout.jpg'
 
 
+
 const Give = () => {
 
   return (

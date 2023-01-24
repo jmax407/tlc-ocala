@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
+import  { HashLink } from 'react-router-hash-link'
 
 // import pastorAnd1stLadyPhoto from '../../assets/images/pastor-and-1stlady.png';
 
@@ -27,15 +27,15 @@ const Intro = () => {
             <div className="row">
               <div className="col-lg-6 offset-lg-3">
               <div className='text-center'>
-                  <Button href='#leadership' variant='primary btn-tlc'>
+                  <HashLink to='#leadership' className='btn btn-primary btn-tlc'>
                     Leadership
-                  </Button>
+                  </HashLink>
                   <Link to='/Give' className='btn btn-secondary btn-tlc mx-3'>
                     How to Give
                   </Link>
-                  <Button href='#services' className='btn btn-alt btn-tlc'>
+                  <HashLink to='#services' className='btn btn-alt btn-tlc'>
                     Services
-                  </Button>
+                  </HashLink>
                 </div>
               </div>
             </div>

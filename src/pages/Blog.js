@@ -1,7 +1,7 @@
 
 import PostsList from '../components/Blog/PostsList'
 import '../components/Blog/Blog.css'
-import { useEffect } from 'react'
+
 
 
 

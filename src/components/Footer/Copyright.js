@@ -7,8 +7,8 @@ const Copyright = () => {
     <div className="copyright">
         <div className="container">
             <div className="row">
-                <div className="col d-flex justify-content-between">
-                    <p>Copyright © The Life Center Church of Ocala {year}. All Rights Reserved.</p>
+                <div className="col">
+                    <p className='text-center'>Copyright © The Life Center Church of Ocala {year}. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
