@@ -1,0 +1,31 @@
+.email-sender { width: 185px;}
+.email-sender h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--aquaGreen);
+
+}
+.email-preview {
+    margin-bottom: 0;
+    padding: 0 20px;
+    color: var(--medGrey);
+}
+
+.inbox-list-item {
+    border-bottom: solid 1px var(--mintGreen);
+    padding: 5px 20px;
+    transition: all ease .3s;
+
+}
+
+.unread .email-preview  {
+    font-weight: 800 !important;
+    color: var(--darkGreen);
+}
+.inbox-list-item:hover {
+    background-color: var(--mintGreen);
+}
+.inbox-list-item:last-child {
+    border-bottom: none;
+}

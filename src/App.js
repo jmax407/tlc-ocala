@@ -19,6 +19,12 @@ import TopBtn from './components/TopBtn';
 import { AuthContext } from './components/context/auth-context';
 import Dashboard from './pages/Dashboard/Dashboard';
 import NotFound from './pages/NotFound';
+import Blogs from './pages/Dashboard/Blogs/Blogs';
+import Alerts from './pages/Dashboard/Alerts/Alerts';
+import Inbox from './pages/Dashboard/Inbox/Inbox'
+import Settings from './pages/Dashboard/Settings/Settings';
+import DashboardLayout from './pages/Dashboard/DashboardLayout';
+import Events from './pages/Dashboard/Events/Events'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -47,7 +53,14 @@ function App() {
         </Route>
         <Route path='/messages' element={<Messages />} />
         <Route path='/messages/:postId' element={<Messages />} />
-        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path="/dashboard" element={<DashboardLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path='Inbox' element={<Inbox />} />
+          <Route path='blogs' element={<Blogs />} />
+          <Route path='alerts' element={<Alerts />} />
+          <Route path='events' element={<Events />} />
+          <Route path='settings' element={<Settings />} />
+        </Route>
         <Route path='*' element={<NotFound />} />
       </>
     );
@@ -61,6 +74,7 @@ function App() {
         <Route path='/blog/:postId' element={<Post />} />
         <Route path='/login' element={<Login />} />
         <Route path='*' element={<NotFound />} />
+        
       </>
     );
   }

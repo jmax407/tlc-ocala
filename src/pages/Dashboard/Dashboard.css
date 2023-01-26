@@ -1,8 +1,17 @@
 .dashboard-container {
     background-color: var(--mintGreen);
+    min-height: 100%;
 }
 .dashboard-menu {
     background-color: var(--aquaGreen);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 200px;
+}
+.dashboard-content {
+    margin-left: 200px;
+    min-height: 100vh;
 }
 .dashboard-navigation {
     list-style: none;
@@ -34,8 +43,49 @@
     background-color: var(--mintGreen);
 }
 .dashboard-navigation li {
-    padding: 1rem
+    padding: 1rem 1.5rem;
 }
 .dashboard-navigation li:before {
     content: "";
+}
+
+.dashboard-nav-list-item.haveNotification::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    margin-top: -5px;
+    left: 15px;
+    display: block;
+    background-color: #FA6400;
+    padding: 3px;
+    border-radius: 50px;
+    width: 5px;
+    height: 5px;
+}
+.dashboard-component-container {
+    border-radius: 10px;
+    background-color: var(--white);
+    padding: 40px;
+}
+.dashboard-component-header {
+    padding: 0px;
+}
+.table-bordered {
+    border-color: var(--mintGreen)
+}
+.table thead th {
+    background-color: var(--mintGreen);
+    border-right-color: var(--white);
+}
+.table thead th:last-child {
+    border-right-color: var(--mintGreen);
+}
+.table>:not(caption)>*>* {
+    padding: 1rem;
+}
+.table-hover>tbody>tr>*{
+    transition: all ease .2s;
+}
+.table-hover>tbody>tr:hover>*{
+    background-color: var(--mintGreen);
 }

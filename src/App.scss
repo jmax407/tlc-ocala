@@ -3,6 +3,7 @@
     --white: #FFFFFF;
     --darkgray: #282F3B;
     --lightGrey: #b8c2c3;
+    --medGrey: #a7a7a7;
     --yellow: #e0bc3f;
     --darkyellow: #987600;
     --tan: #f7f3e7;
@@ -63,7 +64,7 @@ section.vh100 {
     color: var(--white);
 }
 h1,h2,h3,h4 {
-    font-weight: 800;
+    font-weight: 400;
 }
 h1 {font-size: 5rem;}
 h2 {font-size: 3rem;}
