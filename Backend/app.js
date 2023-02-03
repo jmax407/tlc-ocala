@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 mongoose.set("strictQuery", true);
+require("dotenv").config();
+process.env.DB_KEY
 
 const usersRoutes = require('./routes/users-routes');
 const postRoutes = require('./routes/post-routes')
@@ -29,7 +31,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect('mongodb+srv://julius-admin:H9vlQpCcM2hCWvkY@cluster0.mzozik7.mongodb.net/users?retryWrites=true&w=majority')
+  .connect(DB_KEY)
   .then(() => {
     app.listen(5000);
   })
